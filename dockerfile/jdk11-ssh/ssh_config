@@ -1,0 +1,7 @@
+Host *
+    CheckHostIP no
+    PasswordAuthentication no
+    IdentityFile ~/.ssh/id_rsa
+    StrictHostKeyChecking no
+    Port 22
+Include /etc/ssh/ssh_config.d/*.conf
