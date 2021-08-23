@@ -9,7 +9,6 @@ bash $DIR/build-push-base.sh ubuntu
 
 bash $DIR/build-push-base.sh erlang
 bash $DIR/build-push-base.sh go
-bash $DIR/build-push-base.sh go114
 bash $DIR/build-push-base.sh goc
 bash $DIR/build-push-base.sh jdk8
 bash $DIR/build-push-base.sh jdk11

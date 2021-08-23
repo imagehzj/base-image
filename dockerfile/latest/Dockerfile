@@ -1,5 +1,5 @@
 # docker run -it ttbb/base:latest bash
-FROM fedora
+FROM fedora:34
 
 LABEL maintainer="shoothzj@gmail.com"
 LABEL description="This is my base image"
