@@ -96,6 +96,20 @@ jobs:
       - name: Push to Docker Hub
         uses: docker/build-push-action@v2
         with:
+          context: dockerfile/jdk17
+          file: dockerfile/jdk17/Dockerfile
+          push: true
+          tags: ttbb/base:jdk17
+      - name: Push to Docker Hub
+        uses: docker/build-push-action@v2
+        with:
+          context: dockerfile/jdk17-ssh
+          file: dockerfile/jdk17-ssh/Dockerfile
+          push: true
+          tags: ttbb/base:jdk17-ssh
+      - name: Push to Docker Hub
+        uses: docker/build-push-action@v2
+        with:
           context: dockerfile/network
           file: dockerfile/network/Dockerfile
           push: true
