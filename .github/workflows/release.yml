@@ -121,3 +121,10 @@ jobs:
           file: dockerfile/node/Dockerfile
           push: true
           tags: ttbb/base:node
+      - name: Push to Docker Hub
+        uses: docker/build-push-action@v2
+        with:
+          context: dockerfile/rust
+          file: dockerfile/rust/Dockerfile
+          push: true
+          tags: ttbb/base:rust
