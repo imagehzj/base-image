@@ -27,104 +27,95 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: dockerfile/latest
-          file: dockerfile/latest/Dockerfile
           push: true
           tags: ttbb/base:latest
       - name: Push to Docker Hub
         uses: docker/build-push-action@v2
         with:
           context: dockerfile/centos
-          file: dockerfile/centos/Dockerfile
           push: true
           tags: ttbb/base:centos
       - name: Push to Docker Hub
         uses: docker/build-push-action@v2
         with:
           context: dockerfile/ubuntu
-          file: dockerfile/ubuntu/Dockerfile
           push: true
           tags: ttbb/base:ubuntu
       - name: Push to Docker Hub
         uses: docker/build-push-action@v2
         with:
           context: dockerfile/clojure
-          file: dockerfile/clojure/Dockerfile
           push: true
           tags: ttbb/base:clojure
       - name: Push to Docker Hub
         uses: docker/build-push-action@v2
         with:
           context: dockerfile/erlang
-          file: dockerfile/erlang/Dockerfile
           push: true
           tags: ttbb/base:erlang
       - name: Push to Docker Hub
         uses: docker/build-push-action@v2
         with:
           context: dockerfile/go
-          file: dockerfile/go/Dockerfile
           push: true
           tags: ttbb/base:go
       - name: Push to Docker Hub
         uses: docker/build-push-action@v2
         with:
           context: dockerfile/goc
-          file: dockerfile/goc/Dockerfile
           push: true
           tags: ttbb/base:goc
       - name: Push to Docker Hub
         uses: docker/build-push-action@v2
         with:
           context: dockerfile/jdk8
-          file: dockerfile/jdk8/Dockerfile
           push: true
           tags: ttbb/base:jdk8
       - name: Push to Docker Hub
         uses: docker/build-push-action@v2
         with:
           context: dockerfile/jdk11
-          file: dockerfile/jdk11/Dockerfile
           push: true
           tags: ttbb/base:jdk11
       - name: Push to Docker Hub
         uses: docker/build-push-action@v2
         with:
           context: dockerfile/jdk11-ssh
-          file: dockerfile/jdk11-ssh/Dockerfile
           push: true
           tags: ttbb/base:jdk11-ssh
       - name: Push to Docker Hub
         uses: docker/build-push-action@v2
         with:
           context: dockerfile/jdk17
-          file: dockerfile/jdk17/Dockerfile
           push: true
           tags: ttbb/base:jdk17
       - name: Push to Docker Hub
         uses: docker/build-push-action@v2
         with:
           context: dockerfile/jdk17-ssh
-          file: dockerfile/jdk17-ssh/Dockerfile
           push: true
           tags: ttbb/base:jdk17-ssh
       - name: Push to Docker Hub
         uses: docker/build-push-action@v2
         with:
           context: dockerfile/network
-          file: dockerfile/network/Dockerfile
           push: true
           tags: ttbb/base:network
       - name: Push to Docker Hub
         uses: docker/build-push-action@v2
         with:
           context: dockerfile/node
-          file: dockerfile/node/Dockerfile
           push: true
           tags: ttbb/base:node
       - name: Push to Docker Hub
         uses: docker/build-push-action@v2
         with:
+          context: dockerfile/php
+          push: true
+          tags: ttbb/base:php
+      - name: Push to Docker Hub
+        uses: docker/build-push-action@v2
+        with:
           context: dockerfile/rust
-          file: dockerfile/rust/Dockerfile
           push: true
           tags: ttbb/base:rust

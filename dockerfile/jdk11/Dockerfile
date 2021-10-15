@@ -5,7 +5,7 @@ LABEL maintainer="shoothzj@gmail.com"
 LABEL description="This is jdk11 base image"
 
 
-RUN dnf install -y java-11-openjdk-devel && \
+RUN dnf install -yq java-11-openjdk-devel && \
     dnf clean all && \
     wget https://github.com/alibaba/arthas/releases/download/arthas-all-3.5.4/arthas-bin.zip && \
     mkdir -p /opt/sh/arthas && \

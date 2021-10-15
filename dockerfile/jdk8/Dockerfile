@@ -4,7 +4,7 @@ FROM ttbb/base:latest
 LABEL maintainer="shoothzj@gmail.com"
 LABEL description="This is jdk8 base image"
 
-RUN dnf install -y java-1.8.0-openjdk-devel && \
+RUN dnf install -yq java-1.8.0-openjdk-devel && \
     dnf clean all && \
     wget https://github.com/alibaba/arthas/releases/download/arthas-all-3.5.4/arthas-bin.zip && \
     mkdir -p /opt/sh/arthas && \
