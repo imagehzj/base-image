@@ -18,104 +18,124 @@ jobs:
     steps:
       - name: Check out the repo
         uses: actions/checkout@v2
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v1
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
       - name: Log in to Docker Hub
         uses: docker/login-action@v1
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
-      - name: Push to Docker Hub
+      - name: base image amd64
         uses: docker/build-push-action@v2
         with:
           context: dockerfile/latest
           push: true
           tags: ttbb/base:latest
-      - name: Push to Docker Hub
+          platforms: linux/amd64,linux/arm64
+      - name: base centos amd64
         uses: docker/build-push-action@v2
         with:
           context: dockerfile/centos
           push: true
           tags: ttbb/base:centos
-      - name: Push to Docker Hub
+          platforms: linux/amd64,linux/arm64
+      - name: base ubuntu amd64
         uses: docker/build-push-action@v2
         with:
           context: dockerfile/ubuntu
           push: true
           tags: ttbb/base:ubuntu
-      - name: Push to Docker Hub
+          platforms: linux/amd64,linux/arm64
+      - name: base clojure image
         uses: docker/build-push-action@v2
         with:
           context: dockerfile/clojure
           push: true
           tags: ttbb/base:clojure
-      - name: Push to Docker Hub
+          platforms: linux/amd64,linux/arm64
+      - name: base erlang image
         uses: docker/build-push-action@v2
         with:
           context: dockerfile/erlang
           push: true
           tags: ttbb/base:erlang
-      - name: Push to Docker Hub
+          platforms: linux/amd64,linux/arm64
+      - name: base go image
         uses: docker/build-push-action@v2
         with:
           context: dockerfile/go
           push: true
           tags: ttbb/base:go
-      - name: Push to Docker Hub
+          platforms: linux/amd64,linux/arm64
+      - name: base goc image
         uses: docker/build-push-action@v2
         with:
           context: dockerfile/goc
           push: true
           tags: ttbb/base:goc
-      - name: Push to Docker Hub
+          platforms: linux/amd64,linux/arm64
+      - name: base jdk8 image
         uses: docker/build-push-action@v2
         with:
           context: dockerfile/jdk8
           push: true
           tags: ttbb/base:jdk8
-      - name: Push to Docker Hub
+          platforms: linux/amd64,linux/arm64
+      - name: base jdk11 image
         uses: docker/build-push-action@v2
         with:
           context: dockerfile/jdk11
           push: true
           tags: ttbb/base:jdk11
-      - name: Push to Docker Hub
+          platforms: linux/amd64,linux/arm64
+      - name: base jdk11-ssh image
         uses: docker/build-push-action@v2
         with:
           context: dockerfile/jdk11-ssh
           push: true
           tags: ttbb/base:jdk11-ssh
-      - name: Push to Docker Hub
+          platforms: linux/amd64,linux/arm64
+      - name: base jdk17 image
         uses: docker/build-push-action@v2
         with:
           context: dockerfile/jdk17
           push: true
           tags: ttbb/base:jdk17
-      - name: Push to Docker Hub
+          platforms: linux/amd64,linux/arm64
+      - name: base jdk17-ssh image
         uses: docker/build-push-action@v2
         with:
           context: dockerfile/jdk17-ssh
           push: true
           tags: ttbb/base:jdk17-ssh
-      - name: Push to Docker Hub
+          platforms: linux/amd64,linux/arm64
+      - name: base network image
         uses: docker/build-push-action@v2
         with:
           context: dockerfile/network
           push: true
           tags: ttbb/base:network
-      - name: Push to Docker Hub
+          platforms: linux/amd64,linux/arm64
+      - name: base node image
         uses: docker/build-push-action@v2
         with:
           context: dockerfile/node
           push: true
           tags: ttbb/base:node
-      - name: Push to Docker Hub
+          platforms: linux/amd64,linux/arm64
+      - name: base php image
         uses: docker/build-push-action@v2
         with:
           context: dockerfile/php
           push: true
           tags: ttbb/base:php
-      - name: Push to Docker Hub
+          platforms: linux/amd64,linux/arm64
+      - name: base rust image
         uses: docker/build-push-action@v2
         with:
           context: dockerfile/rust
           push: true
           tags: ttbb/base:rust
+          platforms: linux/amd64,linux/arm64
