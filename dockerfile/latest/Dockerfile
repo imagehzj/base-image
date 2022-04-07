@@ -1,4 +1,4 @@
-FROM fedora:35
+FROM fedora:36
 
 LABEL maintainer="shoothzj@gmail.com"
 LABEL description="This is my base image"
