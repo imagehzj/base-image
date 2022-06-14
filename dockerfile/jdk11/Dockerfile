@@ -7,7 +7,7 @@ LABEL description="This is jdk11 base image"
 
 RUN dnf install -yq java-11-openjdk-devel && \
     dnf clean all
-RUN wget https://github.com/alibaba/arthas/releases/download/arthas-all-3.6.0/arthas-bin.zip && \
+RUN wget https://github.com/alibaba/arthas/releases/download/arthas-all-3.6.3/arthas-bin.zip && \
     mkdir -p /opt/sh/arthas && \
     unzip arthas-bin.zip -d /opt/sh/arthas && \
     rm -rf arthas-bin.zip && \
